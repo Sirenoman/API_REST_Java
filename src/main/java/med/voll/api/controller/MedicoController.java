@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import med.voll.api.dto.DatosActualizarMedico;
@@ -29,6 +30,7 @@ import med.voll.api.repositories.MedicoRepository;
 
 @RestController
 @RequestMapping("/medicos")
+@SecurityRequirement(name = "bearer-key")
 public class MedicoController {
 	// MANERA NO MUY EFICIENTE DE LLAMAR LA INTERFAZ DE REPOSITORIO
 	@Autowired

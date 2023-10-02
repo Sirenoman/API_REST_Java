@@ -1,4 +1,4 @@
-package med.voll.api.security;
+package med.voll.api.services;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
