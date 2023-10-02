@@ -7,14 +7,14 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
 public record DatosRegistroMedico(
-		@NotBlank
+		@NotBlank(message = "Nombre es obligatorio")
 		String nombre,
-		@NotBlank
+		@NotBlank(message = "Email es obligatorio")
 		@Email
 		String email,
-		@NotBlank
+		@NotBlank(message = "Telefono es obligatorio")
 		String telefono,
-		@NotBlank
+		@NotBlank(message = "Documento es obligatorio")
 		@Pattern(regexp = "\\d{4,6}")
 		String documento,
 		@NotNull
